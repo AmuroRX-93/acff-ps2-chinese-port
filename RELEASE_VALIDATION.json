@@ -1,9 +1,9 @@
 {
-  "version": "0.12.4-port-beta",
+  "version": "0.12.6-port-beta",
   "source_sha256": "e94c881b242e8614939f39de40e4e0dbd416b3e88c78345dd345a294554d15a9",
-  "target_sha256": "b0d38a262e5908838d283fff1ab6809889377f7c5474ec2c262323630097a61c",
+  "target_sha256": "0ebe7d93c829a09c297369fa9ed4d395c4638202e58f78afb7970a1ff4d7a7c5",
   "image_bytes": 3470426112,
-  "patch_sha256": "f72c5eb86dbf82e398019d3fabd6b278bf934669f4911441611c26b65d6eb8b9",
+  "patch_sha256": "be86e66f021bf053e3a837780bd14a344b90df043d1af46f8369e6b087f3d544",
   "installer_tests_passed": 6,
   "real_source_to_target_reconstruction": true,
   "output_full_readback_sha256_verified": true,

@@ -27,7 +27,7 @@ def build(source, target, output):
                 changed.append(i)
                 z.writestr(f'blocks/{i:06d}.xor', xor_bytes(x, y))
             i += 1
-        m = dict(format='ACFF-XOR-1', version='0.12.4', game='SLPS-25461', size=source.stat().st_size, block_size=BLOCK, source_sha256=a_hash.hexdigest(), target_sha256=b_hash.hexdigest(), chunks=changed)
+        m = dict(format='ACFF-XOR-1', version='0.12.6', game='SLPS-25461', size=source.stat().st_size, block_size=BLOCK, source_sha256=a_hash.hexdigest(), target_sha256=b_hash.hexdigest(), chunks=changed)
         z.writestr('manifest.json', json.dumps(m, indent=2))
     return m
 
