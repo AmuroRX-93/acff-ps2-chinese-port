@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.iso
+*.ISO
+*.ps2
+*.p2s
+*.acpatch
+*.zip
+.DS_Store
+._*

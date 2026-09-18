@@ -1,0 +1,11 @@
+{
+  "version": "0.12.4-port-beta",
+  "source_sha256": "e94c881b242e8614939f39de40e4e0dbd416b3e88c78345dd345a294554d15a9",
+  "target_sha256": "b0d38a262e5908838d283fff1ab6809889377f7c5474ec2c262323630097a61c",
+  "image_bytes": 3470426112,
+  "patch_sha256": "f72c5eb86dbf82e398019d3fabd6b278bf934669f4911441611c26b65d6eb8b9",
+  "installer_tests_passed": 6,
+  "real_source_to_target_reconstruction": true,
+  "output_full_readback_sha256_verified": true,
+  "installer_validation_host": "macOS 15.2"
+}
