@@ -10,8 +10,8 @@
 
 | 已有内容 | 下载 |
 |---|---|
-| 上一公开版 v0.12.6 汉化 ISO，或旧镜像整合 ZIP | **ACFF_v0.12.14_旧版升级包.zip**（约 2.2 MB） |
-| PS2 日版 SLPS-25461 原版 ISO | **ACFF_v0.12.14_原版汉化补丁.zip**（约 554 MB） |
+| 上一公开版 v0.12.6 汉化 ISO，或旧镜像整合 ZIP | **ACFF_v0.12.14_Update_from_v0.12.6.zip**（约 2.2 MB） |
+| PS2 日版 SLPS-25461 原版 ISO | **ACFF_v0.12.14_Full_Patch.zip**（约 554 MB） |
 
 完整解压，Mac 双击 **开始使用.command**，Windows 双击 **开始使用.bat**，按回车开始；随后选择镜像或旧整合 ZIP。工具会识别版本、生成并校验新 ISO。需要 Python 3.10+，不需要额外 Python 模块，预留约 3.6 GB 输出空间。
 

@@ -4,7 +4,7 @@
   "integrated_all_members_verified": true,
   "differentials": [
     {
-      "filename": "ACFF_v0.12.14_旧版升级包.zip",
+      "filename": "ACFF_v0.12.14_Update_from_v0.12.6.zip",
       "size": 2188827,
       "sha256": "ceae920ff209c4e13d14f4e5eba9dcc393de4f388b94ebd37a4e94e840e15b01",
       "all_archive_members_verified": true,
@@ -13,7 +13,7 @@
       "previous_integration_zip_upgrade_verified": true
     },
     {
-      "filename": "ACFF_v0.12.14_原版汉化补丁.zip",
+      "filename": "ACFF_v0.12.14_Full_Patch.zip",
       "size": 554043855,
       "sha256": "5d1fdbaf957089388f5786671408d49f66f427e5f1692632969b373c7f0ee50a",
       "all_archive_members_verified": true,
