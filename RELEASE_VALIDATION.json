@@ -4,28 +4,22 @@
   "integrated_all_members_verified": true,
   "differentials": [
     {
-      "size": 2191390,
-      "sha256": "3987b1a75a11febb476d9df62ee4be56666524a83acc36076f2819f484a7519b",
-      "all_zip_crcs_verified": true,
+      "filename": "ACFF_v0.12.14_旧版升级包.zip",
+      "size": 2188827,
+      "sha256": "ceae920ff209c4e13d14f4e5eba9dcc393de4f388b94ebd37a4e94e840e15b01",
+      "all_archive_members_verified": true,
+      "target_iso_sha256": "f7d531fee570817364b2d900585c3e53675423ae76538c0c3608d27c9455679a",
       "iso_reconstruction_and_disk_readback_verified": true,
-      "previous_integration_zip_upgrade_verified": true,
-      "source_sha256": "0ebe7d93c829a09c297369fa9ed4d395c4638202e58f78afb7970a1ff4d7a7c5",
-      "target_sha256": "f7d531fee570817364b2d900585c3e53675423ae76538c0c3608d27c9455679a",
-      "installer_tests_passed": 8,
-      "windows_launcher_runtime_tested": false,
-      "filename": "ACFF_PS2_Port_v0.12.6_to_v0.12.14_Update.zip"
+      "previous_integration_zip_upgrade_verified": true
     },
     {
-      "size": 554047849,
-      "sha256": "bb3865365d4f68088b1b1a27b60646ba18bd4cc791c2fbe680860086ed1bec1d",
-      "all_zip_crcs_verified": true,
+      "filename": "ACFF_v0.12.14_原版汉化补丁.zip",
+      "size": 554043855,
+      "sha256": "5d1fdbaf957089388f5786671408d49f66f427e5f1692632969b373c7f0ee50a",
+      "all_archive_members_verified": true,
+      "target_iso_sha256": "f7d531fee570817364b2d900585c3e53675423ae76538c0c3608d27c9455679a",
       "iso_reconstruction_and_disk_readback_verified": true,
-      "previous_integration_zip_upgrade_verified": false,
-      "source_sha256": "e94c881b242e8614939f39de40e4e0dbd416b3e88c78345dd345a294554d15a9",
-      "target_sha256": "f7d531fee570817364b2d900585c3e53675423ae76538c0c3608d27c9455679a",
-      "installer_tests_passed": 8,
-      "windows_launcher_runtime_tested": false,
-      "filename": "ACFF_PS2_Port_v0.12.14_Full_Patch.zip"
+      "previous_integration_zip_upgrade_verified": false
     }
   ],
   "runtime": {
@@ -39,5 +33,6 @@
     "atlas_pages_after": 11,
     "additional_allocation_reduction_bytes": 393216
   },
-  "unit_tests": 14
+  "unit_tests": 14,
+  "installer_tests": 14
 }

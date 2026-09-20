@@ -7,15 +7,23 @@ import os
 from pathlib import Path
 import shlex
 import shutil
+import subprocess
 import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
+if ROOT.name == '工具':
+    ROOT = ROOT.parent
 BLOCK = 1024 * 1024
 VERSION = '0.12.14'
 ISO_NAME = 'ACFF_PS2_PSP_Chinese_Port_v0.12.14.iso'
 TARGET_HASH = 'f7d531fee570817364b2d900585c3e53675423ae76538c0c3608d27c9455679a'
 TARGET_SIZE = 3470426112
+
+
+def bundled_iso():
+    root_image = ROOT / ISO_NAME
+    return root_image if root_image.is_file() else ROOT / '游戏' / ISO_NAME
 
 
 def digest_stream(stream):
@@ -181,7 +189,7 @@ def patch(source, output=None, patch_dir=ROOT, report=print):
 
 
 def install(folder, report=print):
-    source = ROOT / ISO_NAME
+    source = bundled_iso()
     if not source.is_file():
         raise ValueError('这个是差分包。请使用“一键汉化或升级”，选择自己的 ISO 或旧整合 ZIP。')
     report('正在校验整合包中的镜像……')
@@ -192,17 +200,31 @@ def install(folder, report=print):
 
 def main():
     p = argparse.ArgumentParser(description='ACFF PSP 汉化资源移植至 PS2 — v0.12.14 安装与升级工具')
-    p.add_argument('action', choices=['patch', 'install', 'verify'])
+    p.add_argument('action', choices=['patch', 'install', 'verify', 'start'])
     p.add_argument('source', nargs='?')
     p.add_argument('--output', type=Path)
     a = p.parse_args()
     print('PSP 原汉化：becky / ben / WEFGOD 等；PS2 移植：AmuroRX-93')
-    if a.action == 'patch':
+    if a.action == 'start':
+        iso = bundled_iso()
+        if not iso.is_file():
+            raise ValueError('请先升级生成新 ISO，再从模拟器打开。')
+        if sys.platform == 'darwin':
+            for app in [Path('/Applications/ARMSX2.app'),Path.home()/'Applications/ARMSX2.app',Path('/Applications/PCSX2.app'),Path.home()/'Applications/PCSX2.app']:
+                if app.is_dir():
+                    subprocess.run(['open','-a',str(app),'--args','--',str(iso)],check=True)
+                    return
+        candidates = [p for d in [ROOT/'模拟器',Path(os.environ.get('ProgramFiles','C:/Program Files'))/'PCSX2',Path(os.environ.get('LOCALAPPDATA','C:/Users/Default/AppData/Local'))/'Programs/PCSX2'] if d.is_dir() for p in d.glob('pcsx2*.exe')]
+        exe = candidates[0] if len(candidates)==1 else parse_path(input('请拖入自己的 PS2 模拟器可执行文件，按回车：\n'))
+        if not exe.is_file():
+            raise ValueError('找不到模拟器。也可以直接从模拟器打开“游戏”文件夹中的 ISO。')
+        subprocess.Popen([str(exe),'--',str(iso)])
+    elif a.action == 'patch':
         patch(a.source or choose('选择 PS2 原版、v0.12.6 ISO，或旧整合包 ZIP'), a.output)
     elif a.action == 'install':
         install(Path(a.source) if a.source else choose('选择游戏镜像目录（原有游戏保持不变）', True))
     else:
-        source = normalize_source(a.source or (ROOT / ISO_NAME if (ROOT / ISO_NAME).exists() else choose('选择要校验的 v0.12.14 ISO 或整合 ZIP')))
+        source = normalize_source(a.source or (bundled_iso() if bundled_iso().exists() else choose('选择要校验的 v0.12.14 ISO 或整合 ZIP')))
         if image_digest(source) != (TARGET_SIZE, TARGET_HASH):
             raise ValueError('不是本次 v0.12.14 的完整镜像。')
         print(f'校验通过：{source}\nSHA-256：{TARGET_HASH}')

@@ -1,67 +1,41 @@
-# ACFF — PSP 汉化资源移植至 PS2 v0.12.14
+# ACFF：PSP 汉化资源移植至 PS2
 
-**这是既有 PSP 民间汉化资源的 PS2 移植版，公开测试、无偿分享。**
-原 PSP 汉化：becky（翻译）、ben（文本导出）、WEFGOD（字库与导入）等；PS2 移植发布：AmuroRX-93（Bilibili：Scorchfrost）。完整致谢与原始发布地址见 `docs/CREDITS.md`。
+**这是既有 PSP 民间汉化资源的 PS2 日版移植版，公开测试、无偿分享。**
 
-## 整合包：解压即可打开游戏
+原 PSP 汉化：**becky（翻译）、ben（文本导出）、WEFGOD（字库与导入）**等。PS2 移植发布：**AmuroRX-93**（Bilibili：Scorchfrost）。完整名单和原始发布位置见[原汉化致谢](docs/CREDITS.md)。PS2 资源适配、补译、代码与排错使用 AI 辅助。
 
-完整解压 ZIP。包内 `ACFF_PS2_PSP_Chinese_Port_v0.12.14.iso` 已包含本次全部游戏修改，无需再打补丁。
+## 下载 v0.12.14
 
-- Mac：双击 `打开游戏.command`，自动寻找已安装的 ARMSX2 或 PCSX2；也可将镜像拖入模拟器。
-- Windows：双击 `打开游戏.bat`，首次按提示拖入自己的 PCSX2 可执行文件；也可直接在模拟器中打开镜像。
-- `校验镜像`：检查完整镜像是否与发布版本一致。
-- `安装到游戏目录`：将本版镜像复制到你选定的游戏目录，自动校验。已有文件不覆盖，不修改存档或模拟器配置。
+前往 **[Release 下载](https://github.com/AmuroRX-93/acff-ps2-chinese-port/releases/tag/v0.12.14-port-beta)**，选一个就行：
 
-模拟器与 BIOS 沿用自己的安装，不捆绑私人配置、记忆卡或即时存档。Mac 打开游戏不要求 Python；安装、升级、校验工具需要 Python 3.10+（仅标准库）。Windows 如果尚未安装 Python，可从 https://www.python.org/downloads/ 安装，并勾选 Add Python to PATH。
+| 已有内容 | 下载 |
+|---|---|
+| 上一公开版 v0.12.6 汉化 ISO，或旧镜像整合 ZIP | **ACFF_v0.12.14_旧版升级包.zip**（约 2.2 MB） |
+| PS2 日版 SLPS-25461 原版 ISO | **ACFF_v0.12.14_原版汉化补丁.zip**（约 554 MB） |
 
-## 已经使用 v0.12.6／旧整合包
+完整解压，Mac 双击 **开始使用.command**，Windows 双击 **开始使用.bat**，按回车开始；随后选择镜像或旧整合 ZIP。工具会识别版本、生成并校验新 ISO。需要 Python 3.10+，不需要额外 Python 模块，预留约 3.6 GB 输出空间。
 
-最省下载量：到 Release 下载 `ACFF_PS2_Port_v0.12.6_to_v0.12.14_Update.zip`，完整解压，运行 `一键汉化或升级`，选择以下任意一个：
+“工具”目录不用翻找，统一从“开始使用”入口操作。“说明”目录包含完整步骤、命令、更新记录、原汉化致谢及字体许可。
 
-1. 上一发布版补丁生成的 v0.12.6 ISO。
-2. 旧整合包解压后的 v0.12.6 ISO。
-3. 尚未解压的旧镜像整合 ZIP（其中只能有一个 ISO）。
+**旧整合 ZIP 可以直接升级，无需先解压，也无需重新下载原版。** 如果已经取得本次新整合包，直接打开“游戏”文件夹里的 ISO，或从开始使用菜单启动即可。
 
-工具按镜像哈希识别版本，文件名可改；不需要重新下载原版或旧版补丁。新 ISO 默认生成在输入文件旁边。需要额外约 3.6 GB 空间，旧文件保持不变。
+工具不覆盖旧镜像，不修改模拟器配置或记忆卡。先在旧游戏中保存并退出，用新 ISO 冷启动后读取原记忆卡存档；不要加载旧版即时存档，它会带回旧程序和字库。
 
-如果已经下载本次新整合包，直接用包内新镜像即可；需要放回原游戏目录时运行 `安装到游戏目录`，然后在模拟器里选中新版镜像或重新扫描目录。
+GitHub Release 附件包含差分与安装工具。`Code → Download ZIP` 仅为工具源码，不含差分数据或游戏镜像。
 
-## 只有原版 ISO
+## 累计内容
 
-下载 `ACFF_PS2_Port_v0.12.14_Full_Patch.zip`，完整解压，运行 `一键汉化或升级`，选择 PS2 日版 SLPS-25461 原版 ISO。
-支持原版大小 3,470,426,112 字节，SHA-256：
-`e94c881b242e8614939f39de40e4e0dbd416b3e88c78345dd345a294554d15a9`。
+- 移植 PSP 对应的菜单、帮助、对话、提示与公共 AI 调校译文，并适配字符编码和字库。
+- 补充 PS2 新闻、队伍介绍、公告、战斗解说、战斗分析、部分图片文字与赛事介绍片中文字幕。
+- 修复 AC 测试字库加载的内存压力；保留 5480 个字码及字距，合并重复字形，字库从 14 页降至 11 页，取整后分配量再减小 384 KiB。
+- 重建 139 个界面中的 508 条按键说明；补齐纪录详情、装备转移及其他确认提示。
+- 统一中文字体为思源黑体，调整左右手、冲刺／跳跃、杜比选项与结算标题。
+- 参照 PSP 与确认表统一公司、队伍译名，包括幻影、屋脊、如月、幻影工坊、屋脊工业和屋脊新挑战。
 
-## 存档与切换版本
+原 PSP 汉化与本次新增范围见致谢与更新记录。本次未新增 PSP 国际版的联赛手动操作玩法。
 
-先在旧游戏里保存并退出。用新 ISO **冷启动**，从游戏内读取原来的记忆卡存档；不要加载旧版即时存档，因为它会带回旧程序和字库。无需重开档，也不要用其他人的记忆卡覆盖自己的。
+两种差分均完成实际镜像重建和读回验证；旧整合 ZIP 直接升级已验证。新版已启动并实见 AC 测试战斗，仍以公开测试版发布。
 
-## 命令行
+输出 ISO SHA-256：`f7d531fee570817364b2d900585c3e53675423ae76538c0c3608d27c9455679a`。
 
-在完整解压的包目录中运行（Windows 可将 `python3` 换成 `py -3`）：
-
-```sh
-# 校验当前整合镜像
-python3 installer/manage.py verify
-# 安装到已有游戏目录，不覆盖旧镜像
-python3 installer/manage.py install "/你的游戏目录"
-# 差分包：从原版或 v0.12.6 ISO 生成新版
-python3 installer/manage.py patch "/路径/旧版.iso"
-# 升级包：直接读取旧整合 ZIP，并指定输出
-python3 installer/manage.py patch "/路径/旧整合包.zip" --output "/目标目录/ACFF_v0.12.14.iso"
-# 校验其他位置的新镜像
-python3 installer/manage.py verify "/路径/ACFF_v0.12.14.iso"
-```
-
-Mac 启动命令：
-```sh
-open -a ARMSX2 --args -- "ACFF_PS2_PSP_Chinese_Port_v0.12.14.iso"
-# 或 PCSX2：
-open -a PCSX2 --args -- "ACFF_PS2_PSP_Chinese_Port_v0.12.14.iso"
-```
-
-如果 Mac 的 .command 没有执行权限，可在终端运行 `bash "打开游戏.command"`；其余入口同理。校验基准见 `RELEASE.json`，包内文件清单见 `SHA256SUMS.txt`。
-
-项目与反馈：https://github.com/AmuroRX-93/acff-ps2-chinese-port
-下载：https://github.com/AmuroRX-93/acff-ps2-chinese-port/releases/tag/v0.12.14-port-beta
-更新范围见 `docs/更新内容.md`。
+[完整说明与命令](说明/使用说明.md) · [更新记录](docs/RELEASE_NOTES.md) · [验证记录](RELEASE_VALIDATION.json) · [反馈](https://github.com/AmuroRX-93/acff-ps2-chinese-port/issues)
