@@ -1,0 +1,13 @@
+{
+  "version": "0.12.14",
+  "type": "PSP Chinese resources port to PS2",
+  "game": "SLPS-25461",
+  "iso_name": "ACFF_PS2_PSP_Chinese_Port_v0.12.14.iso",
+  "iso_size": 3470426112,
+  "iso_sha256": "f7d531fee570817364b2d900585c3e53675423ae76538c0c3608d27c9455679a",
+  "supported_inputs": {
+    "PS2_JP_original": "e94c881b242e8614939f39de40e4e0dbd416b3e88c78345dd345a294554d15a9",
+    "public_v0.12.6_and_old_integration": "0ebe7d93c829a09c297369fa9ed4d395c4638202e58f78afb7970a1ff4d7a7c5"
+  },
+  "release_url": "https://github.com/AmuroRX-93/acff-ps2-chinese-port/releases/tag/v0.12.14-port-beta"
+}

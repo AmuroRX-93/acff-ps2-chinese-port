@@ -1,11 +1,43 @@
 {
-  "version": "0.12.6-port-beta",
-  "source_sha256": "e94c881b242e8614939f39de40e4e0dbd416b3e88c78345dd345a294554d15a9",
-  "target_sha256": "0ebe7d93c829a09c297369fa9ed4d395c4638202e58f78afb7970a1ff4d7a7c5",
-  "image_bytes": 3470426112,
-  "patch_sha256": "be86e66f021bf053e3a837780bd14a344b90df043d1af46f8369e6b087f3d544",
-  "installer_tests_passed": 6,
-  "real_source_to_target_reconstruction": true,
-  "output_full_readback_sha256_verified": true,
-  "installer_validation_host": "macOS 15.2"
+  "version": "0.12.14-port-beta",
+  "target_iso_sha256": "f7d531fee570817364b2d900585c3e53675423ae76538c0c3608d27c9455679a",
+  "integrated_all_members_verified": true,
+  "differentials": [
+    {
+      "size": 2191390,
+      "sha256": "3987b1a75a11febb476d9df62ee4be56666524a83acc36076f2819f484a7519b",
+      "all_zip_crcs_verified": true,
+      "iso_reconstruction_and_disk_readback_verified": true,
+      "previous_integration_zip_upgrade_verified": true,
+      "source_sha256": "0ebe7d93c829a09c297369fa9ed4d395c4638202e58f78afb7970a1ff4d7a7c5",
+      "target_sha256": "f7d531fee570817364b2d900585c3e53675423ae76538c0c3608d27c9455679a",
+      "installer_tests_passed": 8,
+      "windows_launcher_runtime_tested": false,
+      "filename": "ACFF_PS2_Port_v0.12.6_to_v0.12.14_Update.zip"
+    },
+    {
+      "size": 554047849,
+      "sha256": "bb3865365d4f68088b1b1a27b60646ba18bd4cc791c2fbe680860086ed1bec1d",
+      "all_zip_crcs_verified": true,
+      "iso_reconstruction_and_disk_readback_verified": true,
+      "previous_integration_zip_upgrade_verified": false,
+      "source_sha256": "e94c881b242e8614939f39de40e4e0dbd416b3e88c78345dd345a294554d15a9",
+      "target_sha256": "f7d531fee570817364b2d900585c3e53675423ae76538c0c3608d27c9455679a",
+      "installer_tests_passed": 8,
+      "windows_launcher_runtime_tested": false,
+      "filename": "ACFF_PS2_Port_v0.12.14_Full_Patch.zip"
+    }
+  ],
+  "runtime": {
+    "cold_boot_and_ac_test_battle_observed": true,
+    "all_pages_or_maps_verified": false
+  },
+  "memory": {
+    "all_5480_character_mappings_and_metrics_preserved": true,
+    "duplicate_images_merged": 1209,
+    "atlas_pages_before": 14,
+    "atlas_pages_after": 11,
+    "additional_allocation_reduction_bytes": 393216
+  },
+  "unit_tests": 14
 }

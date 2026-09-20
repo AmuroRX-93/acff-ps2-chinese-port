@@ -117,15 +117,13 @@ def choose_source():
 
 
 def main():
-    print('ACFF — PSP 汉化资源移植至 PS2 | v0.12.6 公开测试版')
-    print('原 PSP 汉化：becky / ben / WEFGOD 等；PS2 移植发布：AmuroRX-93')
-    if len(sys.argv) > 1:
-        source = Path(sys.argv[1])
+    from manage import patch, choose
+    source = Path(sys.argv[1]) if len(sys.argv) > 1 else choose('选择 PS2 原版、v0.12.6 ISO 或旧整合 ZIP')
+    output = Path(sys.argv[2]) if len(sys.argv) > 2 else None
+    if len(sys.argv) > 3:
+        apply(source, output or source.with_name('ACFF_PS2_PSP_Chinese_Port_v0.12.14.iso'), Path(sys.argv[3]))
     else:
-        source = choose_source()
-    output = Path(sys.argv[2]) if len(sys.argv) > 2 else source.with_name(source.stem + '_PSP汉化移植PS2_v0.12.6.iso')
-    bundle = Path(sys.argv[3]) if len(sys.argv) > 3 else Path(__file__).resolve().parent.parent / 'ACFF_PSP_to_PS2_v0.12.6.acpatch'
-    apply(source, output, bundle)
+        patch(source, output)
 
 
 if __name__ == '__main__':
