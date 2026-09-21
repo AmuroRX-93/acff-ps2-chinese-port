@@ -1,0 +1,65 @@
+{
+  "version": "0.13.0-movies-beta",
+  "input_sha256": "f7d531fee570817364b2d900585c3e53675423ae76538c0c3608d27c9455679a",
+  "output_sha256": "01fa52626eca140ae22e82f6830a8cd886ad24977eaa9c1883bebc281888c923",
+  "offline": {
+    "total_movies": 64,
+    "candidate_movies": 47,
+    "retained_after_sampled_audit": 17,
+    "all_candidate_full_decode": true,
+    "frame_count_and_rate_match": true,
+    "original_pss_audio_payload_identical": true,
+    "iso_layout_unchanged": true,
+    "byte_whitelist_verified": true,
+    "terminology_logical": 34,
+    "terminology_physical": 99
+  },
+  "runtime": {
+    "platform": "macOS Apple Silicon / ARMSX2 d7e8d01678 / Metal",
+    "candidate_sha256": "01fa52626eca140ae22e82f6830a8cd886ad24977eaa9c1883bebc281888c923",
+    "cold_boot": true,
+    "copied_memory_card_loaded": true,
+    "observed": [
+      "进入中央菜单和 D.A.C. 邮件列表",
+      "FFA规则指南→方程式前线新手说明(7)→视频附件",
+      "S01 中文面板与字幕实际播放",
+      "首次播放后观察到返回邮件列表；未逐帧记录整段",
+      "再次打开同一附件，S01 中文播放",
+      "按圆圈跳过 S01 后进入 K01 中文比赛按键指南",
+      "再次跳过 K01 后返回邮件正文"
+    ],
+    "not_verified": [
+      "全部47段邮件和系统入口逐项走查",
+      "全部影片无操作完整播放逐帧验收",
+      "全片人工听审",
+      "全部剧情解锁及结局路径",
+      "Windows/Linux实际运行",
+      "真实PS2硬件"
+    ]
+  },
+  "installation": {
+    "full_image_reconstruction": true,
+    "chinese_and_space_path": true,
+    "output_readback_sha256": true,
+    "original_preserved": true,
+    "unit_failures_passed": [
+      "wrong_size",
+      "wrong_hash",
+      "wrong_version",
+      "corrupt_patch",
+      "interruption_cleanup",
+      "insufficient_space",
+      "readonly_output_simulated",
+      "existing_and_concurrent_output",
+      "previous_partial_preserved"
+    ],
+    "clean_zip_install": "See external release verification report"
+  },
+  "limitations": [
+    "OP仅稳定组装标签汉化，快速缩放参数和艺术文字保留",
+    "17段保留片的判断基于范围抽样",
+    "局部背景修补可能有柔化痕迹",
+    "片中商标、装饰英文、制作名单保留"
+  ],
+  "highlight_fix": "P02-P11 fixed selected-label brightness detection; P01 regenerated with same logic"
+}
