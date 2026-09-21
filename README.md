@@ -4,26 +4,33 @@
 
 原 PSP 汉化：**becky（翻译）、ben（文本导出）、WEFGOD（字库与导入）**等。PS2 移植发布：**AmuroRX-93**（Bilibili：Scorchfrost）。完整名单和原始发布位置见[原汉化致谢](docs/CREDITS.md)。PS2 资源适配、补译、代码与排错使用 AI 辅助。
 
-## 下载 v0.12.14
+## 基础汉化 + 影片汉化：统一下载入口
 
-前往 **[Release 下载](https://github.com/AmuroRX-93/acff-ps2-chinese-port/releases/tag/v0.12.14-port-beta)**，选一个就行：
+**想玩带中文影片的版本，从这里下载即可。两阶段安装，最终得到 v0.13.0 影片汉化测试版。**
 
-| 已有内容 | 下载 |
-|---|---|
-| 上一公开版 v0.12.6 汉化 ISO，或旧镜像整合 ZIP | **ACFF_v0.12.14_Update_from_v0.12.6.zip**（约 2.2 MB） |
-| PS2 日版 SLPS-25461 原版 ISO | **ACFF_v0.12.14_Full_Patch.zip**（约 554 MB） |
+| 你现在有的版本 | 第一步：基础汉化至 v0.12.14 | 第二步：影片升级至 v0.13.0 |
+|---|---|---|
+| PS2 日版 SLPS-25461 原版 ISO | [① 下载基础汉化补丁（554 MB）](https://github.com/AmuroRX-93/acff-ps2-chinese-port/releases/download/v0.12.14-port-beta/ACFF_v0.12.14_Full_Patch.zip) | [② 下载影片升级补丁（1.92 GB）](https://github.com/AmuroRX-93/acff-ps2-chinese-port/releases/download/v0.13.0-movies-beta/ACFF_v0.13.0_Movies_Update_from_v0.12.14.zip) |
+| v0.12.6 汉化 ISO／对应旧整合 ZIP | [① 下载旧版升级补丁（2.2 MB）](https://github.com/AmuroRX-93/acff-ps2-chinese-port/releases/download/v0.12.14-port-beta/ACFF_v0.12.14_Update_from_v0.12.6.zip) | [② 下载影片升级补丁（1.92 GB）](https://github.com/AmuroRX-93/acff-ps2-chinese-port/releases/download/v0.13.0-movies-beta/ACFF_v0.13.0_Movies_Update_from_v0.12.14.zip) |
+| 已有 v0.12.14 汉化 ISO | 无需下载第一步 | [直接下载影片升级补丁（1.92 GB）](https://github.com/AmuroRX-93/acff-ps2-chinese-port/releases/download/v0.13.0-movies-beta/ACFF_v0.13.0_Movies_Update_from_v0.12.14.zip) |
 
-完整解压，Mac 双击 **开始使用.command**，Windows 双击 **开始使用.bat**，按回车开始；随后选择镜像或旧整合 ZIP。工具会识别版本、生成并校验新 ISO。需要 Python 3.10+，不需要额外 Python 模块，预留约 3.6 GB 输出空间。
+### 安装顺序
 
-“工具”目录不用翻找，统一从“开始使用”入口操作。“说明”目录包含完整步骤、命令、更新记录、原汉化致谢及字体许可。
+1. 原版／v0.12.6 用户先下载自己这一行的 **① 和 ②**；已有 v0.12.14 的用户只下载 **②**。这是统一下载入口，不是重复包含两份补丁的新大包，总下载量不会因此缩小。
+2. 将所需 ZIP **分别完整解压到不同文件夹**。两阶段一起使用时安装 Python **3.10 或以上**，无需额外 Python 模块。
+3. 先运行 **①** 内的 `开始使用.command`（Mac）或 `开始使用.bat`（Windows），选择原版 ISO／对应旧版文件，等它生成并校验 **v0.12.14 ISO**。
+4. 再运行 **②** 内的 `Mac_开始升级.command` 或 `Windows_开始升级.bat`，选择上一步生成的 **v0.12.14 ISO**。已有该版本的用户从这一步开始。**影片补丁不能直接套在原版、v0.12.6 或旧整合 ZIP 上。**
+5. 完成后用 **v0.13.0 新 ISO 冷启动**，在游戏内读取原记忆卡存档；不要加载升级前的模拟器即时存档。工具保留旧 ISO，每一步都会另生成约 3.47 GB 的新镜像，请为两个阶段分别留出输出空间。
 
-**旧整合 ZIP 可以直接升级，无需先解压，也无需重新下载原版。** 如果已经取得本次新整合包，直接打开“游戏”文件夹里的 ISO，或从开始使用菜单启动即可。
+只要把[这个页面](https://github.com/AmuroRX-93/acff-ps2-chinese-port/releases/tag/v0.13.0-movies-beta)分享给朋友，就能找到基础汉化与影片升级。上表链接直接下载对应 Release 附件；不要用 `Code → Download ZIP` 代替补丁。
 
-工具不覆盖旧镜像，不修改模拟器配置或记忆卡。先在旧游戏中保存并退出，用新 ISO 冷启动后读取原记忆卡存档；不要加载旧版即时存档，它会带回旧程序和字库。
+---
 
-GitHub Release 附件包含差分与安装工具。`Code → Download ZIP` 仅为工具源码，不含差分数据或游戏镜像。
+### 基础包说明
 
-## 累计内容
+GitHub Release 附件包含差分、安装工具和说明，不包含完整游戏 ISO。旧整合 ZIP 可作为 v0.12.14 旧版升级工具的输入；影片升级工具则只接受已经生成的 v0.12.14 ISO。工具不覆盖旧镜像，不修改模拟器配置或记忆卡。
+
+## v0.12.14 基础汉化累计内容
 
 - 移植 PSP 对应的菜单、帮助、对话、提示与公共 AI 调校译文，并适配字符编码和字库。
 - 补充 PS2 新闻、队伍介绍、公告、战斗解说、战斗分析、部分图片文字与赛事介绍片中文字幕。
