@@ -1,3 +1,11 @@
+## 最新更新：ACFF v0.13.1 校对修订累计升级（测试版）
+
+[下载最新版升级包](https://github.com/AmuroRX-93/acff-ps2-chinese-port/releases/tag/v0.13.1-review-beta) · [完整使用说明](releases/20261001/使用说明.md)
+
+从公开 v0.13.0 影片版生成新版 ISO；包含 9 月 22 日与 9 月 28 日修订，内置 Windows/Mac Python。本次修订仅离线验证。
+
+---
+
 # ACFF：PSP 汉化资源移植至 PS2
 
 **这是既有 PSP 民间汉化资源的 PS2 日版移植版，公开测试、无偿分享。**

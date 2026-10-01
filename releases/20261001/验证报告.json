@@ -1,0 +1,21 @@
+{
+  "passed": [
+    "public_v0130_preflight",
+    "public_v0130_full_reconstruction",
+    "existing_output_refused",
+    "already_latest_noop",
+    "unknown_baseline_refused",
+    "original_unchanged"
+  ],
+  "platform": "macOS Apple Silicon; bundled CPython",
+  "windows_tested": false,
+  "intel_mac_tested": false,
+  "game_tested": false,
+  "failure_tests": [
+    "second_file_commit_failure_restores_all",
+    "interrupted_commit_journal_recovery",
+    "restore_refuses_later_modifications",
+    "insufficient_space_before_write",
+    "corrupted_payload_no_output_or_source_change"
+  ]
+}
